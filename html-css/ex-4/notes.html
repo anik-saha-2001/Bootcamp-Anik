@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 4: CSS Units and Responsive Design - Notes</title>
+  </head>
+  <body>
+    <h1>Exercise 4: CSS Units and Responsive Design</h1>
+
+    <h2>
+      Level 1: Centered Layout with Percentage, Viewport Height, and Viewport
+      Width Units
+    </h2>
+    <ul>
+      <li>
+        `height: 100vh;`: Sets the body height to 100% of the viewport
+        height.
+      </li>
+      <li>
+        `display: flex;`: Enables flexbox layout for centering the content.
+      </li>
+      <li>`justify-content: center;`: Centers the content horizontally.</li>
+      <li>`align-items: center;`: Centers the content vertically.</li>
+      <li>
+        Percentage Widths: Using percentages for width allows elements to
+        adapt to different screen sizes.
+      </li>
+      <li>
+        Max-width: Sets a maximum width to prevent the content from becoming
+        too wide on larger screens.
+      </li>
+    </ul>
+
+    <h2>Level 2: Responsive Layout with Min(), Max(), and Clamp()</h2>
+    <ul>
+      <li>
+        `clamp()` Function: Creates a flexible font size that adapts to the
+        viewport size.
+      </li>
+      <li>
+        Min and Max Values: Sets minimum and maximum font sizes to ensure
+        readability.
+      </li>
+      <li>
+        Viewport Units (vw): Uses viewport width to scale font sizes
+        relative to the screen size.
+      </li>
+    </ul>
+
+    <h2>Level 3: Continuous Responsiveness with Fluid Grid and Typography</h2>
+    <ul>
+      <li>
+        CSS Grid: Creates flexible grid layouts that adapt to different
+        screen sizes.
+      </li>
+      <li>
+        `grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));`:
+        Creates columns that automatically adjust to the available width.
+      </li>
+      <li>
+        Media Queries: Target specific screen sizes to apply custom styles.
+      </li>
+      <li>
+        Fluid Typography: Uses techniques like `em` units and `clamp()` to
+        scale font sizes relative to the parent element or viewport size.
+      </li>
+    </ul>
+
+    <p>
+      By understanding and applying these techniques, you can create web pages
+      that look great and function seamlessly across a wide range of devices and
+      screen sizes.
+    </p>
+  </body>
+</html>

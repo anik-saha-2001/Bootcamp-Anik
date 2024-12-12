@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golden Grid Layout</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        height: 100%;
+      }
+
+      body {
+        display: grid;
+        grid-template-rows: minmax(50px, auto) 1fr minmax(50px, auto);
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "main"
+          "footer";
+        height: 100%;
+      }
+
+      .container {
+        display: grid;
+        grid-template-rows: minmax(50px, auto) 1fr minmax(50px, auto);
+        grid-template-columns: minmax(150px, 1fr) 3fr minmax(150px, 1fr);
+        grid-template-areas:
+          "header header header"
+          "sidebar-left main sidebar-right"
+          "footer footer footer";
+        gap: 1rem;
+        height: 100%;
+      }
+
+      header {
+        grid-area: header;
+        border: 1px solid black;
+        padding: 1rem;
+        text-align: center;
+        font-size: 1.5rem;
+        color: black;
+      }
+
+      .sidebar-left {
+        grid-area: sidebar-left;
+        border: 1px solid black;
+        padding: 1rem;
+        color: black;
+      }
+
+      .main {
+        grid-area: main;
+        border: 1px solid black;
+        padding: 1rem;
+        color: black;
+      }
+
+      .sidebar-right {
+        grid-area: sidebar-right;
+        border: 1px solid black;
+        padding: 1rem;
+        color: black;
+      }
+
+      footer {
+        grid-area: footer;
+        border: 1px solid black;
+        padding: 1rem;
+        text-align: center;
+        color: black;
+      }
+
+      /* Responsive layout for mobile screens */
+      @media (max-width: 768px) {
+        .container {
+          grid-template-rows: auto 1fr auto auto auto;
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "header"
+            "main"
+            "sidebar-left"
+            "sidebar-right"
+            "footer";
+        }
+
+        header {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>Header</header>
+      <div class="sidebar-left">Left Sidebar</div>
+      <div class="main">Main Content</div>
+      <div class="sidebar-right">Right Sidebar</div>
+      <footer>Footer</footer>
+    </div>
+  </body>
+</html>

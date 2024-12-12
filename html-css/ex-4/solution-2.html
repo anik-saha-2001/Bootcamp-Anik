@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Layout</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 3vw, 4rem);
+        text-align: center;
+      }
+
+      p {
+        font-size: clamp(1rem, 2vw, 1.5rem);
+        line-height: 1.5;
+        margin: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Responsive Heading</h1>
+    <p>
+      This text scales with the viewport size, ensuring readability on different
+      devices. The font size will adjust between 2rem and 4rem, depending on the
+      viewport width.
+    </p>
+  </body>
+</html>

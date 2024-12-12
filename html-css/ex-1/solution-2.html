@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced Webpage Layout</title>
+    <style>
+      body {
+        display: grid;
+        grid-template-columns: 200px 1fr 200px;
+        grid-template-rows: auto auto 1fr; /* Added row definition for header and footer */
+        gap: 10px;
+      }
+
+      header,
+      footer {
+        grid-column: span 3; /* Spans all three columns */
+        border: 1px solid #ddd;
+        padding: 10px;
+      }
+
+      nav {
+        border: 1px solid #ddd;
+        padding: 10px;
+      }
+
+      nav:first-child {
+        /* Left Navigation */
+        grid-row: 2; /* Places in the second row */
+      }
+
+      nav:last-child {
+        /* Right Navigation */
+        grid-row: 3; /* Places in the third row */
+      }
+
+      main {
+        grid-column: 2; /* Spans only the middle column */
+        grid-row: span 2; /* Spans two rows (header excluded) */
+        border: 1px solid #ddd;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Enhanced Webpage Layout</h1>
+    </header>
+    <nav>
+      <h2>Left Navigation</h2>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <h2>Main Content</h2>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Laptop</td>
+              <td>$999</td>
+              <td>High-performance computing device</td>
+            </tr>
+            <tr>
+              <td>Smartphone</td>
+              <td>$599</td>
+              <td>Advanced mobile communication tool</td>
+            </tr>
+            <tr>
+              <td>Headphones</td>
+              <td>$199</td>
+              <td>Noise-cancelling audio experience</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <nav>
+      <h2>Right Navigation</h2>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#support">Support</a></li>
+      </ul>
+    </nav>
+    <footer>
+      <p>Contact: example@email.com</p>
+    </footer>
+  </body>
+</html>

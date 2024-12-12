@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golden Layout</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        display: grid;
+        grid-template-areas:
+          "header header header"
+          "sidebar-left main-content sidebar-right"
+          "footer footer footer";
+        grid-gap: 10px;
+      }
+
+      header,
+      footer,
+      .sidebar-left,
+      .sidebar-right,
+      .main-content {
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+
+      header {
+        grid-area: header;
+      }
+
+      .sidebar-left {
+        grid-area: sidebar-left;
+      }
+
+      .main-content {
+        grid-area: main-content;
+        overflow-y: auto; /* Handle overflow with scrollbar */
+      }
+
+      .sidebar-right {
+        grid-area: sidebar-right;
+      }
+
+      footer {
+        grid-area: footer;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        body {
+          grid-template-areas:
+            "header"
+            "sidebar-left"
+            "main-content"
+            "sidebar-right"
+            "footer";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>Header</header>
+    <aside class="sidebar-left">Sidebar Left</aside>
+    <section class="main-content">Main Content</section>
+    <aside class="sidebar-right">Sidebar Right</aside>
+    <footer>Footer</footer>
+  </body>
+</html>

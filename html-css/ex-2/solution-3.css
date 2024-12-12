@@ -1,0 +1,58 @@
+:root {
+    /* Light Theme Variables */
+    --light-primary: #3498db;
+    --light-secondary: #2ecc71;
+    --light-background: white;
+    --light-text: #333;
+
+    /* Dark Theme Variables */
+    --dark-primary: #2980b9;
+    --dark-secondary: #27ae60;
+    --dark-background: #121212;
+    --dark-text: #f0f0f0;
+
+    /* Theme-independent variables using referencing */
+    --primary-color: var(--light-primary);
+    --secondary-color: var(--light-secondary);
+    --background-color: var(--light-background);
+    --text-color: var(--light-text);
+}
+
+/* Dark Mode */
+[data-theme='dark'] {
+    --primary-color: var(--dark-primary);
+    --secondary-color: var(--dark-secondary);
+    --background-color: var(--dark-background);
+    --text-color: var(--dark-text);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+table tr:nth-child(odd) {
+    background-color: color-mix(in srgb, var(--primary-color) 20%, transparent);
+}
+
+table tr:nth-child(even) {
+    background-color: color-mix(in srgb, var(--secondary-color) 20%, transparent);
+}
