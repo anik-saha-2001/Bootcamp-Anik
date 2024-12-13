@@ -3,72 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Golden Layout</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Exercise 5 - Level 2</title>
     <style>
-      html,
       body {
-        height: 100%;
         margin: 0;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
       }
 
-      body {
+      .grid-container {
         display: grid;
         grid-template-areas:
-          "header header header"
-          "sidebar-left main-content sidebar-right"
-          "footer footer footer";
-        grid-gap: 10px;
+          "header header"
+          "main-content sidebar-top"
+          "main-content sidebar-bottom";
+        grid-template-columns: 1fr 1fr; /* 50% width for main and sidebars */
+        grid-template-rows: auto 1fr 1fr; /* Header is auto height, rest are flexible */
+        height: 100vh; /* Full viewport height */
+        gap: 10px; /* Spacing between grid items */
       }
 
-      header,
-      footer,
-      .sidebar-left,
-      .sidebar-right,
-      .main-content {
-        padding: 20px;
-        border: 1px solid #ccc;
-      }
-
-      header {
+      .header {
         grid-area: header;
-      }
-
-      .sidebar-left {
-        grid-area: sidebar-left;
+        background-color: #ffd700; /* Gold */
+        padding: 10px;
+        text-align: center;
       }
 
       .main-content {
         grid-area: main-content;
-        overflow-y: auto; /* Handle overflow with scrollbar */
+        background-color: #ffffff;
+        padding: 10px;
+        overflow-y: auto; /* Enables vertical scrolling for overflow content */
+        overflow-x: hidden; /* Prevents horizontal scrolling */
       }
 
-      .sidebar-right {
-        grid-area: sidebar-right;
+      .sidebar-top {
+        grid-area: sidebar-top;
+        background-color: #f4f4f4;
+        padding: 10px;
       }
 
-      footer {
-        grid-area: footer;
+      .sidebar-bottom {
+        grid-area: sidebar-bottom;
+        background-color: #e0e0e0;
+        padding: 10px;
       }
 
-      /* Responsive adjustments */
+      /* Responsive Adjustments */
       @media (max-width: 768px) {
-        body {
+        .grid-container {
           grid-template-areas:
             "header"
-            "sidebar-left"
             "main-content"
-            "sidebar-right"
-            "footer";
+            "sidebar-top"
+            "sidebar-bottom";
+          grid-template-columns: 1fr; /* Single column layout */
+          grid-template-rows: auto; /* Adjust heights automatically */
         }
+
+        .main-content {
+          overflow-y: auto; /* Maintain scrolling for overflow content */
+        }
+      }
+
+      /* Aesthetic Scrollbar (optional) */
+      .main-content::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      .main-content::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-radius: 4px;
       }
     </style>
   </head>
   <body>
-    <header>Header</header>
-    <aside class="sidebar-left">Sidebar Left</aside>
-    <section class="main-content">Main Content</section>
-    <aside class="sidebar-right">Sidebar Right</aside>
-    <footer>Footer</footer>
+    <div class="grid-container">
+      <header class="header">Header</header>
+      <main class="main-content">Main Content</main>
+      <aside class="sidebar-top">Top Sidebar</aside>
+      <aside class="sidebar-bottom">Bottom Sidebar</aside>
+    </div>
   </body>
 </html>

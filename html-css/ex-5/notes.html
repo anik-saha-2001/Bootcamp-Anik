@@ -1,56 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Exercise 5: CSS Grid Layout - Notes</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenges in Layout Design</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+        background-color: #f9f9f9;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      .challenge-section {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .challenge-section h2 {
+        color: #444;
+      }
+
+      .challenge-section p {
+        margin: 10px 0;
+        color: #555;
+      }
+
+      .challenge-section ul {
+        margin: 10px 0;
+        padding-left: 20px;
+      }
+
+      .challenge-section ul li {
+        margin: 5px 0;
+      }
+    </style>
   </head>
   <body>
-    <h1>Exercise 5: CSS Grid Layout</h1>
+    <h1>Challenges in Layout Design</h1>
 
-    <h2>Level 1: Basic Grid Layout</h2>
-    <ul>
-      <li>Grid Template Areas: Defines the layout using named areas.</li>
-      <li>Grid Gap: Sets spacing between grid items.</li>
-      <li>Grid Area Property: Assigns elements to specific grid areas.</li>
-    </ul>
+    <div class="challenge-section">
+      <h2>1. Golden Layout (Header, Two Sidebars, Main Content)</h2>
+      <p>The challenges in creating this layout include:</p>
+      <ul>
+        <li>
+          Ensuring consistent proportions across different screen sizes while
+          maintaining the golden ratio.
+        </li>
+        <li>
+          Managing the layout’s responsiveness to avoid squishing sidebars or
+          the main content on smaller screens.
+        </li>
+        <li>
+          Proper alignment and spacing of content within each section without
+          overlapping.
+        </li>
+      </ul>
+    </div>
 
-    <h2>Level 2: Handling Overflow and Responsive Adjustments</h2>
-    <ul>
-      <li>
-        Overflow Handling: Uses `overflow-y: auto;` to enable scrolling for
-        content that exceeds the container's height.
-      </li>
-      <li>
-        Media Queries: Targets specific screen sizes to apply different
-        layouts.
-      </li>
-      <li>
-        Responsive Grid Template Areas: Rearranges grid areas for smaller
-        screens to optimize the layout.
-      </li>
-    </ul>
+    <div class="challenge-section">
+      <h2>2. Main Content on Left, Sidebars Stacked on Right</h2>
+      <p>The challenges in this layout include:</p>
+      <ul>
+        <li>
+          Adjusting the stacking of sidebars correctly while keeping the main
+          content fixed at 50% width.
+        </li>
+        <li>
+          Balancing the vertical spacing between the top and bottom sidebars.
+        </li>
+        <li>
+          Handling overflow content gracefully in the stacked sidebar areas,
+          especially on small screens.
+        </li>
+      </ul>
+    </div>
 
-    <h2>
-      Level 3: Flexible Grid with Dynamic Grid Areas and Mobile Responsiveness
-    </h2>
-    <ul>
-      <li>
-        Grid Template Rows and Columns: Defines flexible grid rows and
-        columns using `minmax()` function.
-      </li>
-      <li>
-        Grid Template Columns: Assigns specific widths to columns using `fr`
-        units.
-      </li>
-      <li>
-        Responsive Adjustments: Uses media queries to adapt the layout to
-        different screen sizes.
-      </li>
-    </ul>
-
-    <p>
-      By understanding these concepts, you can create complex and responsive
-      layouts using CSS Grid. Experiment with different grid templates, gap
-      sizes, and media queries to achieve desired layouts.
-    </p>
+    <div class="challenge-section">
+      <h2>3. Using <code>minmax()</code> for Flexible Sizing</h2>
+      <p>Challenges faced in this layout include:</p>
+      <ul>
+        <li>
+          Choosing appropriate minimum and maximum values to ensure a flexible
+          and readable layout.
+        </li>
+        <li>
+          Making sure the layout adjusts smoothly between different screen sizes
+          while maintaining proportions.
+        </li>
+        <li>
+          Integrating responsive design to transition between multi-column and
+          single-column layouts seamlessly.
+        </li>
+      </ul>
+    </div>
   </body>
 </html>
