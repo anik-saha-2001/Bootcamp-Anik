@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4 - Level 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .image-container {
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .description {
+            font-size: 1rem;
+            color: #555;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Images with Lazy Loading</h1>
+
+    <div class="image-container">
+        <picture>
+            <source srcset="https://picsum.photos/800/400" media="(min-width: 768px)" type="image/jpeg">
+            <source srcset="https://picsum.photos/400/200" media="(max-width: 767px)" type="image/jpeg">
+            <img src="https://picsum.photos/800/400" alt="Responsive Image" loading="lazy" style="width: 100%; height: auto; border-radius: 10px;">
+        </picture>
+        <p class="description">This image uses the <code>&lt;picture&gt;</code> element for responsive behavior and lazy loading for performance optimization.</p>
+    </div>
+</body>
+</html>

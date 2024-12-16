@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 5 - Level 1</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #818181;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h4 {
+        color: #000;
+      }
+
+      /* Navbar styles */
+      .navbar {
+        background: #fff;
+        color: #000;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #e9e9e9;
+      }
+
+      .logo {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 32px;
+        font-weight: 900;
+      }
+
+      .navbar a {
+        color: #818181;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 17px;
+      }
+
+      .navbar a i {
+        font-size: 17px;
+        margin-right: 10px;
+      }
+
+      .navbar a:hover {
+        color: #000;
+      }
+
+      /* Layout styles */
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        width: 60%;
+        height: 100vh;
+        margin: 0 auto;
+      }
+
+      .main-content {
+        flex: 3;
+        padding: 20px;
+        height: 100%;
+      }
+
+      .posts {
+        padding: 30px 0;
+      }
+
+      .posts p,
+      .posts h2 {
+        margin: 8px;
+      }
+
+      .post {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #e9e9e9;
+      }
+
+      .post-inside {
+        display: flex;
+      }
+
+      .sidebar {
+        flex: 1;
+        border-left: 1px solid #e9e9e9;
+        padding: 20px;
+        height: 100%;
+      }
+
+      .topics {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .topics button {
+        background: #eeebeb;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 30px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      @media screen and (max-width: 1024px) {
+        .container {
+          margin-top: 20px;
+          min-height: 100vh;
+          width: 100%;
+          flex-direction: column-reverse;
+        }
+        .icons {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="logo">Medium</div>
+      <div class="icons">
+        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#"><i class="fa-solid fa-pen"></i>Write</a>
+        <a href="#"><i class="fa-solid fa-bell"></i></a>
+        <a href="#"><i class="fa-solid fa-circle-user"></i></a>
+      </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Sidebar -->
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="navbar">
+          <div class="icons">
+            <a href="#"><i class="fa-solid fa-plus"></i></a>
+            <a href="#">For you</a>
+            <a href="#">Following</a>
+          </div>
+        </div>
+        <div class="posts">
+          <!-- Post 1 -->
+          <div class="post">
+            <p>In Coding Beauty by Tari Ibaba</p>
+            <div class="post-inside">
+              <div>
+                <h2>
+                  This new JavaScript operator is an absolute game changer
+                </h2>
+                <p>Say goodbye to try-catch</p>
+              </div>
+              <img
+                src="https://picsum.photos/160/100"
+                alt="Placeholder Image 1"
+              />
+            </div>
+            <p>✨ Sep 18&nbsp;&nbsp;&nbsp;👋 5.7K&nbsp;&nbsp;&nbsp;💬 84</p>
+          </div>
+          <!-- Post 2 -->
+          <div class="post">
+            <p>In Coding Beauty by Tari Ibaba</p>
+            <div class="post-inside">
+              <div>
+                <h2>
+                  This new JavaScript operator is an absolute game changer
+                </h2>
+                <p>Say goodbye to try-catch</p>
+              </div>
+              <img
+                src="https://picsum.photos/160/100"
+                alt="Placeholder Image 1"
+              />
+            </div>
+            <p>✨ Sep 18&nbsp;&nbsp;&nbsp;👋 5.7K&nbsp;&nbsp;&nbsp;💬 84</p>
+          </div>
+          <!-- Post 3 -->
+          <div class="post">
+            <p>In Coding Beauty by Tari Ibaba</p>
+            <div class="post-inside">
+              <div>
+                <h2>
+                  This new JavaScript operator is an absolute game changer
+                </h2>
+                <p>Say goodbye to try-catch</p>
+              </div>
+              <img
+                src="https://picsum.photos/160/100"
+                alt="Placeholder Image 1"
+              />
+            </div>
+            <p>✨ Sep 18&nbsp;&nbsp;&nbsp;👋 5.7K&nbsp;&nbsp;&nbsp;💬 84</p>
+          </div>
+          <!-- Post 4 -->
+          <div class="post">
+            <p>In Coding Beauty by Tari Ibaba</p>
+            <div class="post-inside">
+              <div>
+                <h2>
+                  This new JavaScript operator is an absolute game changer
+                </h2>
+                <p>Say goodbye to try-catch</p>
+              </div>
+              <img
+                src="https://picsum.photos/160/100"
+                alt="Placeholder Image 1"
+              />
+            </div>
+            <p>✨ Sep 18&nbsp;&nbsp;&nbsp;👋 5.7K&nbsp;&nbsp;&nbsp;💬 84</p>
+          </div>
+          <!-- Post 5 -->
+          <div class="post">
+            <p>In Coding Beauty by Tari Ibaba</p>
+            <div class="post-inside">
+              <div>
+                <h2>
+                  This new JavaScript operator is an absolute game changer
+                </h2>
+                <p>Say goodbye to try-catch</p>
+              </div>
+              <img
+                src="https://picsum.photos/160/100"
+                alt="Placeholder Image 1"
+              />
+            </div>
+            <p>✨ Sep 18&nbsp;&nbsp;&nbsp;👋 5.7K&nbsp;&nbsp;&nbsp;💬 84</p>
+          </div>
+          <!-- Post 6 -->
+          <div class="post">
+            <p>In Coding Beauty by Tari Ibaba</p>
+            <div class="post-inside">
+              <div>
+                <h2>
+                  This new JavaScript operator is an absolute game changer
+                </h2>
+                <p>Say goodbye to try-catch</p>
+              </div>
+              <img
+                src="https://picsum.photos/160/100"
+                alt="Placeholder Image 1"
+              />
+            </div>
+            <p>✨ Sep 18&nbsp;&nbsp;&nbsp;👋 5.7K&nbsp;&nbsp;&nbsp;💬 84</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <h4>Staff Picks</h4>
+        <p>In Fanfare by Monia Ali</p>
+        <h3>The Spoilerphobic Era</h3>
+
+        <p>✨ 5d ago</p>
+        <p>In UX Collective</p>
+        <h3>Goodbye, immortal design</h3>
+
+        <p>✨ 5d ago</p>
+        <p>I THOUGHT THI... by Scott Muska</p>
+
+        <h3>A Review: Publishing an Absolute Flop</h3>
+        <p>✨ Nov 22</p>
+        <p>See the full list</p>
+
+        <h4>Recommended topics</h4>
+        <div class="topics">
+          <button>Programming</button>
+          <button>Self Improvement</button>
+          <button>Data Science</button>
+          <button>Writing</button>
+          <button>Relationships</button>
+          <button>Technology</button>
+          <button>Cryptocurrency</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

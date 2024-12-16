@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient Theme and Responsive Color Palette</title>
+    <style>
+      /* Base Colors */
+      :root {
+        --primary: #4caf50;
+        --secondary: #ff9800;
+      }
+
+      /* Gradient Theme */
+      h1 {
+        background: linear-gradient(to right, #f00, #0ff);
+        color: #fff;
+        padding: 20px;
+      }
+
+      button {
+        background: radial-gradient(circle at center, #007bff, #fff);
+        border: none;
+        padding: 10px 20px;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      /* Responsive Color Palette */
+      @media (max-width: 768px) {
+        :root {
+          --primary: lighten(var(--primary), 20%);
+          --secondary: darken(var(--secondary), 10%);
+        }
+      }
+
+      /* Contrast Demonstration */
+      .contrast-section {
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .contrast-section h2 {
+        color: var(--primary);
+        margin-bottom: 10px;
+      }
+
+      .contrast-section p {
+        color: var(--secondary);
+      }
+
+      .low-contrast {
+        background-color: #f0f0f0;
+        color: #ccc;
+      }
+
+      .high-contrast {
+        background-color: #333;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Gradient Header</h1>
+    <button>Gradient Button</button>
+
+    <h2>Responsive Color Palette</h2>
+    <p>The colors will adjust based on screen size.</p>
+
+    <h2>Contrast Demonstration</h2>
+    <div class="contrast-section">
+      <h2>High Contrast</h2>
+      <p>This text has good contrast.</p>
+    </div>
+    <div class="contrast-section low-contrast">
+      <h2>Low Contrast</h2>
+      <p>This text has poor contrast.</p>
+    </div>
+  </body>
+</html>
